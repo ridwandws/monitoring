@@ -3,7 +3,7 @@
 Install epel-release
 yum install -y epel-release
 yum -y install redis
-cat > /etc/yum.repos.d/sensu.repo <<'EOF'
+cat > /etc/yum.repos.d/sensu.repo <<"EOF"
 [sensu]
 name=sensu
 baseurl=https://sensu.global.ssl.fastly.net/yum/$releasever/$basearch/
@@ -21,7 +21,7 @@ echo "---line 481 requirepass *** password for transport"
 echo "2. Config sensu and uchiwa"
 echo "---create file /etc/sensu/config.json - this will create automate when you running this file"
 touch /etc/sensu/config.json
-cat > config.json <<'EOF' 
+cat > config.json <<"EOF" 
 {
    "transport": {
      "name": "redis"
